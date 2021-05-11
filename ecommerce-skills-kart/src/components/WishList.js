@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { useDispatchCart , useCart } from "../contexts/Cart-context";
 import { useDispatchWishList, useWishList } from "../contexts/WishList-context";
 import {checkingItem} from "../utils";
+
+
 export const WishList = ({route}) => {
+
+  const navigate = useNavigate();
   const WishListItems = useWishList();
   const wishDispatch = useDispatchWishList();
   const handleRemoveWish = ({id}) => {
@@ -87,7 +92,7 @@ export const WishList = ({route}) => {
          ) : (
           <button onClick={() => {
             checkingItem(items , id) ? 
-            route("Cart") :
+            navigate("/cart") :
             addToCartFromWishList({
             id,
             name,
