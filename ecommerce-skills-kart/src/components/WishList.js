@@ -64,8 +64,7 @@ export const WishList = ({route}) => {
         <div className="product-category" >{category}</div>
       )}
       
-          <h4 className="product-name">{name} {<small style={{color: "grey"}}> - {mentors} </small>}</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+      <h4 className="product-name"><a href="">{name} {<small style={{color: "grey"}}> - {mentors} </small>}</a></h4>          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
     {!inStock ? (
        <div style={{color: "grey" , textAlign: "left"}} className="levels-notinstock">Level: {level}</div>
        ) : (

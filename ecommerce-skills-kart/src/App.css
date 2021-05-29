@@ -36,6 +36,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -46,7 +47,7 @@
   color: rgb(0 0 0 / 50%);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: 1.5rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
@@ -54,8 +55,13 @@
   cursor: pointer;
 }
 .nav-logo-img {
-  float: left;
-  padding: 20px;
+font-size: 1.2rem;
+font-family: "Montserrat", sans-serif;
+color: #4caf50;
+font-weight: 650;
+}
+.nav-logo-img span {
+  color: #333;
 }
 
 .fa-bars,
@@ -63,6 +69,7 @@
 .fa-heart,
 .fa-shopping-cart {
   font-size: 1.6rem;
+ 
 }
 
 .count-badge {
@@ -78,7 +85,7 @@
 
 .nav-icon {
   position: relative;
-  right: 25px;
+  left: 8px;
 }
 .prev-btn,
 .next-btn {
@@ -114,7 +121,7 @@
   box-shadow: 0 0 5pt 0.5pt #d3d3d3;
   width: 100%;
   overflow-y: scroll;
-  height: auto;
+  height: 100%;;
   margin: auto;
   box-shadow: 0 0 10px 4px rgb(0 0 0 / 5%);
 }
@@ -390,6 +397,9 @@ hr {
   bottom: 40px;
   font-family: var(--font-fam);
 }
+.product-cart-name{
+  font-size: 0.9rem;
+}
 .product-cart-price {
   font-size: 1rem;
   color: #333;
@@ -432,7 +442,7 @@ hr {
   color: red;
 }
 .product-cart-category {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   margin: auto;
   background-color: rgb(76, 175, 80);
   opacity: 0.7;
@@ -541,7 +551,7 @@ hr {
 }
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 26px;
   height: 20px;
   left: 25px;
@@ -549,6 +559,7 @@ hr {
 }
 
 .bm-burger-bars {
+  position: absolute;
   background: #373a47;
 }
 
@@ -689,14 +700,12 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.8rem;
-    float: right;
-    position: relative;
-    right: 25px;
+    justify-items: center;
   }
   .wishList-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.8rem;
+    column-gap: 1rem;
     justify-content: center;
     align-content: center;
   }
@@ -706,8 +715,7 @@ hr {
   }
 
   .refine-box-inner {
-    width: 25%;
-    /* position: fixed; */
+    width: 20%;
     float: left;
     margin-top: 95px;
     height: 650px;
@@ -719,7 +727,6 @@ hr {
   }
   .product-cart-card {
     margin: auto;
-    /* float: left; */
     border: 1px solid #dfdfdf;
     width: 80%;
     height: 10rem;
@@ -752,18 +759,20 @@ hr {
   }
 
   .nav-logo-img {
-    float: left;
+    text-align: left;
+    /* position: fixed; */
+    /* float: left;
     position: relative;
-    right: 24rem;
+    right: 24rem; */
   }
   .nav-icon {
     position: relative;
-    left: 16rem;
+    left: 26rem;
   }
   .nav-link-text {
     font-size: 1.2rem;
     position: relative;
-    right: 46rem;
+    right: 36rem;
     color: #333;
   }
   .nav-link-text:hover {
@@ -773,5 +782,70 @@ hr {
   .nav-link-text::-moz-selection {
     color: #4caf50;
     background-color: white;
+  }
+  .product-cart-name{
+    font-size: 1.2rem;
+  }
+  .product-cart-category{
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-icon {
+    position: relative;
+    left: 12rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.8rem;
+    justify-items: center;
+  }
+  .product-card {
+    position: relative;
+    bottom: 40px;
+  }
+  .wishList-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .refine-box-inner {
+    width: 25%;
+    float: left;
+    margin-top: 90px;
+    height: 650px;
+    background-color: inherit;
+    overflow: hidden;
+  }
+  .product-card {
+    position: relative;
+    bottom: 40px;
+  }
+  .product-cart-card {
+    margin: auto;
+    /* float: left; */
+    border: 1px solid #dfdfdf;
+    width: 80%;
+    height: 10rem;
+    box-shadow: 0 2px 7px #dfdfdf;
+    background: #fafafa;
+  }
+  .wishList-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    justify-content: center;
+    align-content: center;
   }
 }

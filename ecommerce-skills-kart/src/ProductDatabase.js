@@ -25,7 +25,7 @@ export const data = [...Array(50)].map((item) => ({
   category: faker.random.arrayElement([
     "PROGRAMMING",
     "DESIGNING",
-    "CONTENT / COPYWRITING",
+    "COPYWRITING",
     "EDITING & FILMAKING",
     "OTHERS"
   ]),

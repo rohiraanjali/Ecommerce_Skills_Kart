@@ -9,10 +9,10 @@ const Navbar = () => {
 const items = useCart(); 
 const WishListItems = useWishList();
 
-    const [isDesktop, setDesktop] = React.useState(window.innerWidth > 1450);
+    const [isDesktop, setDesktop] = React.useState(window.innerWidth > 1023);
 
     const updateMedia = () => {
-      setDesktop(window.innerWidth > 1450);
+      setDesktop(window.innerWidth > 1023);
     };
   
     React.useEffect(() => {
@@ -25,7 +25,7 @@ const WishListItems = useWishList();
           <ul className="header-nav-ul">
           <NavLink  to="/" className="header-nav-link">
          <li>
-          <img className="nav-logo-img"style={{width: "30%" }} src={logo} />
+         <h1 className="nav-logo-img">SKILLS<span>KART</span></h1>
          </li>
          </NavLink>
         

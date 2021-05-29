@@ -26,10 +26,10 @@ export const Shop = () => {
   const removeWishFromShop = ({id}) => {
     wishDispatch({type: "REMOVEWISHFROMSHOP" , id});
   }
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 1450);
+    setDesktop(window.innerWidth > 1023);
   };
 
   useEffect(() => {
@@ -117,7 +117,7 @@ export const Shop = () => {
            checked={ContentCategory}
            onChange={() => productDispatch({ type: "TOGGLE_CONTENT" })}
          />
-         Content / Copywriting
+         Copywriting
        </label>
        <label>
          <input
@@ -260,7 +260,7 @@ export const Shop = () => {
               checked={ContentCategory}
               onChange={() => productDispatch({ type: "TOGGLE_CONTENT" })}
             />
-            Content / Copywriting
+            Copywriting
           </label>
           <label>
             <input
@@ -342,7 +342,7 @@ export const Shop = () => {
           
           
         </div>
-      )} Resources to get u started
+      )} 
           <div style={{marginTop: "130px"}}className="cards" >
           
             { data.map(
