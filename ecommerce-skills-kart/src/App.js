@@ -14,18 +14,14 @@ import {
 function App() {
   
   return (
-
-
     <div className="App">
     <Sidebar />
     <Navbar />
-    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<WishList />} />
-        
         </Routes>  
     </div>
   

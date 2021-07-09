@@ -7,7 +7,6 @@ import { NavLink } from 'react-router-dom';
 
  export const Home = () => {
     const navigate = useNavigate();
-
     return (
         <div className="App">
             <div className="shortcut-shop">
@@ -19,9 +18,7 @@ import { NavLink } from 'react-router-dom';
             <h3 className="main-subhead-img">UPTO <span className="offer-text"> 50% OFF</span>  on various skills</h3>
            
             <button onClick={() => navigate("/shop")} className="shop-btn">Shop </button>
-        
             </div>
-          
                <br />
                <br />
                <br />
